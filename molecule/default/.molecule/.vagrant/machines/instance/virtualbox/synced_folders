@@ -1,0 +1,1 @@
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/root/Maksov_Infra/ansible/roles/db/molecule/default/.molecule","disabled":false,"__vagrantfile":true}}}
