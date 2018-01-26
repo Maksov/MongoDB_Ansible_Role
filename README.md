@@ -18,7 +18,7 @@ Role Variables
 ``` 
 mongo_port: 27017 
 bind_ip: 127.0.0.1
-
+env: local
 ```` 
 
 Dependencies
