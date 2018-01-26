@@ -1,4 +1,8 @@
-language: bash
+language: python
+python:
+- '3.6'
+install:
+- pip install -r requirements.txt
 env:
   global:
   - secure: Tl3N7lShuCpEbRD7utbqNLF842CDjPO/MNukdXuxXjMVoWzE9ECFCLJfRyvPD1L9WEUNBlTtunCb3nwwAPe7U4kVLpjcS5m/5R0UkJj5oAG3JlfFDlbOwn2PBKoT3MtmbWh8A7ZjFNby8p8yC6Eoe/FcyI6Av3XV+zD/3k5VH7Ykpp9VbWgOJJzVbP+t0djB7XsDtSsjKUVbGEjsH15yUIzGwkLvNKCiksj1sFOW3phGesgXgNzcn6MB7QMnn1MnP2Xky6gEamEV8ZpYxsZ3Ld8kv/RP/Yai2JGRRB0q0lPXVKyl+UwORhCxB/as7K0xX4cwCeWSEocYnTBIFPZHeeG+84hlDPKKtfc0sTKlisOU8q9eMzDBb7HpccdW8U/tUEIcCvB+3gWumaBmoD8a7trDcdk2+UwDT+vxPUk7fhKRfpMxbzVZbDWjJJwuFYsrYRMfhncMRDV3NbjH6/OqninGU2dOwrnthJP/zE2j322ePQcbqXeV0CjLM51bjgbghIawgqq/GN+qJ/bwDk3egGcrlN7kMYYLBSUzeumCm+K88qB2NUll2suv5lciinw6HRc4Y4L2WO3KAC6gnwOLUczBVV1suPrfm1qa31rm2OBaCmKDnjcvd9K2FixuoltXRVkIGieLWTlzwryBddyYQuyV8Pdq7g96FXC5tmR3NE4=
@@ -7,3 +11,6 @@ env:
 before_install:
 - openssl aes-256-cbc -K $encrypted_063127390e3c_key -iv $encrypted_063127390e3c_iv
   -in secrets.tar.enc -out secrets.tar -d
+- tar xvf secrets.tar
+- mv google_compute_engine /home/travis/.ssh/
+- chmod 0600 /home/travis/.ssh/google_compute_engine
