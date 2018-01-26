@@ -6,16 +6,23 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: travis-test
-    zone: europe-west1-d
+  - name: instanse
+    zone: europe-west-d
     machine_type: f1-micro
-    image: ubuntu-1604-lts
+    image: ubuntu-1604-xenial-v20180122       
 provisioner:
   name: ansible
   lint:
     name: ansible-lint
 scenario:
   name: default
+  test_sequence:
+   - lint
+   - syntax
+   - create
+   - converge
+   - verify
+   - destroy
 verifier:
   name: testinfra
   lint:
