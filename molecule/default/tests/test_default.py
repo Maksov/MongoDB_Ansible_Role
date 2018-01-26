@@ -9,8 +9,8 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 # check if MongoDB is enabled and running
 def test_mongo_running_and_enabled(host):
 	mongo = host.service("mongod")
-     	assert mongo.is_running
-     	assert mongo.is_enabled
+	assert mongo.is_running
+	assert mongo.is_enabled
  
 # check if configuration file contains the required line
 def test_config_file(File):
