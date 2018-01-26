@@ -3,10 +3,10 @@ MongoDB Ansible Role
 
 This role installs and simple configures MongoDB. This simple role for OTUS DevOps Course Homework № 13 Developing and testing Ansible roles and playbooks.
 
-Test Roles
+Test Role
 -----------
 
-Travis-CI testing role with Molecule and Testinfra on Google Cloud Platform
+[Travis-CI](https://travis-ci.org/) testing role with [Molecule](http://molecule.readthedocs.io) and [Testinfra](http://testinfra.readthedocs.io) on [Google Cloud Platform](https://cloud.google.com)
 
 Requirements
 ------------
@@ -28,10 +28,8 @@ Dependencies
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
-
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - mongodb_ansible_role
 
 
