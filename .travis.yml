@@ -12,7 +12,8 @@ env:
 install:
  - pip install -r requirements.txt
 script:
- - molecule test
+ - molecule create
+ - molecule --debug converge
 before_install:
 - openssl aes-256-cbc -K $encrypted_525e33639717_key -iv $encrypted_525e33639717_iv
   -in secrets.tar.enc -out secrets.tar -d 
