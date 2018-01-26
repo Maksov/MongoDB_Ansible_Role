@@ -1,9 +1,5 @@
 ---
 - name: Converge
   hosts: all
-  become: true
-  vars:
-   mongo_bind_ip: 0.0.0.0
   roles:
-    - role: mongodb_ansible_role
-  
+    - role: MongoDB_Ansible_Role
