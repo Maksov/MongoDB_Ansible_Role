@@ -1,5 +1,5 @@
 ---
-- name: pre-Converge
+- name: Converge
   hosts: all
   gather_facts: False
   tasks:
