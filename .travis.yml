@@ -10,6 +10,8 @@ env:
   - secure: H1BIMNm9UfIbRnnYqwE4Y2WSa7aa+TTC+Iv4ojwL+dGvVcpd7eA09EHnDsS3jCbkPbgKjNoaaY4EZlddN8NhSaZLl2aGFOF1myN6rD6fz8KGMbbhoDLgTTGPM1MTELcFnWqdL1VyYUdROzgHHaVfwIXg6dZs3AKqwdJvJPlh9a9oOF1PKo1VlnAjCdCNcbfDOqZ+Bi38G5RRibEH/KfY1lciMX8MQmy8SDMiCnaVjD8B9cl5p+nCPo6bRL+taU656YpUeGh2euegSaK+npGAFvqZtwRnwOx5Mb3u/9ngG8ITKlwtqHucvQgM9I16QOWY/zzxNaNnK0QgL5FmiMsnry3CTTjJFLG1wDzIs1r9ydmR6HJlMmA6ZB5SCFikd4XcgkvqngaDyZwZOPe3TX7/rf92GuXB1t6pN5KW0lDo1emmsyR6g7mlU1AfIvydD+uDsSBLXQ9BXg2MM1jx/WQ/wf0+fwvsoX8nZisJd3MGK5qo5cBAVL5UCpE84D3A5C9/LBMAFttOMZovaIxp9c3j1PbTaSx5Xo9NNj9lsCIiB8+8WIleh5GHMmwNZkjuUqEps33VjvifoZN3S981VlkKXcfESiGEG1tZwE/Lh/MFNXrsDmcvTY3vbpYax5B/Gb8SPpE441rBzRtYeWzDQpSOLp7B+kmKMC/7cTbHNnSgpc8=
 install:
  - pip install -r requirements.txt
+script:
+ - molecule --debug create
 before_install:
 - openssl aes-256-cbc -K $encrypted_525e33639717_key -iv $encrypted_525e33639717_iv
   -in secrets.tar.enc -out secrets.tar -d 
