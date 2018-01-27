@@ -1,4 +1,4 @@
-MongoDB Ansible Role
+MongoDB Ansible Role [![Build Status](https://travis-ci.org/Maksov/mongodb_ansible_role.svg?branch=master)](https://travis-ci.org/Maksov/mongodb_ansible_role)
 =========
 
 This role installs and simple configures MongoDB. This simple role for OTUS DevOps Course Homework № 13 Developing and testing Ansible roles and playbooks.
