@@ -28,7 +28,7 @@ Dependencies
 Example Playbook
 ----------------
 
-    - hosts: servers
+    - hosts: all
       roles:
          - mongodb_ansible_role
 
